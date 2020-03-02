@@ -25,15 +25,19 @@ import pymysql
 from urllib.parse import urlencode
 
 connect = pymysql.Connect(
-        host='***',
-        port=***,
-        user='***',
-        passwd='***',
+        host='rm-wz988to0p0a7js870o.mysql.rds.aliyuncs.com',
+        port=3306,
+        user='root',
+        passwd='zd45+3=48',
         db='meiti',
         use_unicode=1,
         charset='utf8'
     )
-
+#base_url = 'https://m.weibo.cn/api/container/getIndex?'
+#base_url = 'https://m.weibo.cn/api/container/getIndex?uid=1267454277&luicode=10000011&lfid=100103type%3D1%26q%3D%E5%87%A4%E5%87%B0%E5%91%A8%E5%88%8A&type=uid&value=1267454277&'
+#url = 'https://m.weibo.cn/api/container/getIndex?uid=1267454277&luicode=10000011&lfid=100103type%3D1%26q%3D%E5%87%A4%E5%87%B0%E5%91%A8%E5%88%8A&type=uid&value=1267454277&containerid=1076031267454277&page=2'
+#requests.get(url, headers = head).json()
+#
 #Cookie = {'Cookie':'_T_WM=47854944278; SSOLoginState=1561903263; ALF=1564495263; SCF=ApI7HxidQxU5v8irMXxaTGdQW3FI_s9n_4gfl1xjFie98yHjfNgjHrBD3f0crwRNbkz1S5R2lAJpLDcrCxq3W3E.; SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9W5OGXIi5MM8SNSz6T4-N8pg5JpX5KMhUgL.Fozpe02XSo-feoz2dJLoI7p8McyDdJHKIgfD9s2t; WEIBOCN_WM=3349; H5_wentry=H5; backURL=https%3A%2F%2Fm.weibo.cn%2Fcomments%2Fhotflow%3Fid%3D4184261000821994%26mid%3D4184261000821994%26max_id_type%3D0%26page%3D10; SUB=_2A25wHLFLDeRhGeBG7lsV9S3Kwz-IHXVT_t8DrDV6PUJbkdAKLWrDkW1NRhnyJ4GxIA5PbirJLGZHMyrAHW948R17; SUHB=0LcSCKV8neiHXj; MLOGIN=1; XSRF-TOKEN=e5521b; WEIBOCN_FROM=1110006030; M_WEIBOCN_PARAMS=luicode%3D20000174%26lfid%3D231093_-_selffollowed%26uicode%3D20000174'}
 head = {'User-Agent':'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0'}
 def get_page(con_id,page):
